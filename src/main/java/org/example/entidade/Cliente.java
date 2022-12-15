@@ -9,7 +9,7 @@ public class Cliente {
 
     private int telefone;
 
-    //private Endereco end;
+   // private Endereco end;
 
     private int codCliente;
     Random random = new Random();
@@ -18,7 +18,6 @@ public class Cliente {
         this.nome = nome;
         this.idade = idade;
         this.telefone = telefone;
-        //this.end = end;
         this.codCliente = random.nextInt(100);
 
     }
@@ -35,11 +34,15 @@ public class Cliente {
         return telefone;
     }
 
-//    public Endereco getEndereco() {
-//        return end;
-//    }
-
     public int getcodCliente() {
         return codCliente;
     }
+
+//    public void setEndereco(Endereco end) {
+//        this.end = end;
+//    }
+//
+//    public Endereco getEnd() {
+//        return end;
+//    }
 }

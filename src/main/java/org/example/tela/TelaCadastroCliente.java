@@ -1,6 +1,7 @@
 package org.example.tela;
 
 import org.example.entidade.Cliente;
+//import org.example.entidade.Endereco;
 
 import java.util.Scanner;
 
@@ -17,10 +18,11 @@ public class TelaCadastroCliente {
         System.out.println("Informe seu telefone");
         int telefone = scanner.nextInt();
 
-//        System.out.println("Informe o seu Endereço");
+//        System.out.println("Informe seu Endereço (rua, bairro e num)");
 //        String end = scanner.next();
 
         return new Cliente( nome, idade, telefone);
+
     }
 
 }
