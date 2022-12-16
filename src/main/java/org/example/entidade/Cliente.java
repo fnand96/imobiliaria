@@ -9,40 +9,42 @@ public class Cliente {
 
     private int telefone;
 
-   // private Endereco end;
+    private Endereco end;
 
-    private int codCliente;
-    Random random = new Random();
+    //public int codCliente;
+    //Random random = new Random();
 
-    public Cliente(String nome, int idade, int telefone){
+    public Cliente(String nome, int idade, int telefone, Endereco end){
         this.nome = nome;
         this.idade = idade;
         this.telefone = telefone;
-        this.codCliente = random.nextInt(100);
-
+        this.end = end;
+        //this.codCliente = random.nextInt(100);
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public int getTelefone() {
-        return telefone;
-    }
-
-    public int getcodCliente() {
-        return codCliente;
-    }
-
-//    public void setEndereco(Endereco end) {
-//        this.end = end;
+//
+//    public String getNome() {
+//        return nome;
 //    }
 //
-//    public Endereco getEnd() {
+//    public int getIdade() {
+//        return idade;
+//    }
+//
+//    public int getTelefone() {
+//        return telefone;
+//    }
+//
+//    public int getcodCliente() {
+//        return codCliente;
+//    }
+//
+//    public Endereco getEndereco() {
 //        return end;
 //    }
+//
+//    public void setEndereco(Endereco endereco) {
+//        this.end = end;
+//    }
+
+
 }
