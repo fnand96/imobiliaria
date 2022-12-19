@@ -1,6 +1,8 @@
 package org.example.tela;
 
 import org.example.entidade.*;
+import org.example.persistencia.Inventario;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -69,11 +71,14 @@ public class TelaCadastroImovel {
         int codImovel;
         Random random = new Random();
         codImovel = random.nextInt(100);
-        System.out.println("Cadastro realizado!! O código do imóvel é: "+ codImovel);
 
         Endereco end = new Endereco(rua, estado, bairro, cidade, cep, num);
 
-        return new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, tipoDeNegocio);
+        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, tipoDeNegocio);
+        Inventario.adicionar(imovel);
+
+        System.out.println("Cadastro realizado!! O código do imóvel é: "+ codImovel);
+        return imovel;
     }
 
 

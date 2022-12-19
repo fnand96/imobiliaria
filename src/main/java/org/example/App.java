@@ -19,7 +19,7 @@ public class App
         int opcao = 0;
 
         do {
-            System.out.println(" (1) - Cadastrar Cliente \n (2) - Cadastrar Imovel \n (3) - Cadastrar Interesse por Imovel \n (0) - Sair");
+            System.out.println(" (1) - Cadastrar Cliente \n (2) - Cadastrar Imovel \n (3) - Cadastrar Interesse por Imovel \n (4) - Buscar Imóvel Por Endereço \n (0) - Sair");
 
             opcao = scanner.nextInt();
             Cliente cliente = null;
@@ -34,6 +34,9 @@ public class App
                     break;
                 case 3:
                     interesse = TelaCadastroInteresseporImovel.cadastrarInteresse(scanner);
+                    break;
+                case 4:
+                    // Buscar imóvel por endereço
                     break;
                 case 0:
                     System.out.println("Até Logo");
