@@ -16,26 +16,26 @@ public class Endereco {
     }
 
 
-//
-//    public String getRua() {
-//        return rua;
-//    }
-//
-//    public String getBairro() {
-//        return bairro;
-//    }
-//    public String getCidade() {
-////        return cidade;
-////    }
-////    public String getEstado() {
-////        return estado;
-////    }
-//    public int getNum() {
-//        return num;
-//    }
-//    public int getCep() {
-//        return cep;
-//   }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+    public String getCidade() {
+        return cidade;
+    }
+    public String getEstado() {
+        return estado;
+    }
+    public int getNum() {
+        return num;
+    }
+    public int getCep() {
+        return cep;
+   }
 
 
 }

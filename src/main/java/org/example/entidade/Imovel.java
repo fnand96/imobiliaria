@@ -39,38 +39,58 @@ public class Imovel {
         this.codImovel = random.nextInt(100);
     }
 
-//    public String getTipoDeImovel() {
-//        return tipoDeImovel;
-//    }
-//
-//    public int getSala() {
-//        return sala;
-//    }
-//    public int getCozinha() {
-//        return cozinha;
-//    }
-//    public int getBanheiro() {
-//        return banheiro;
-//    }
-//    public int getEscritorio() {
-//        return escritorio;
-//    }
-//    public int getLavanderia() {
-//        return lavanderia;
-//    }
-//    public int getDespensa() {
-//        return despensa;
-//    }
-//    public int getVaranda() {
-//        return varanda;
-//    }
-//
-//    public int getPreco() {
-//        return preco;
-//    }
-//
-//    public String getTipoDeNegocio() {
-//        return tipoDeNegocio;
-//    }
+    public String getTipoDeImovel() {
+        return tipoDeImovel;
+    }
 
+    public int getSala() {
+        return sala;
+    }
+    public int getCozinha() {
+        return cozinha;
+    }
+    public int getBanheiro() {
+        return banheiro;
+    }
+    public int getEscritorio() {
+        return escritorio;
+    }
+    public int getLavanderia() {
+        return lavanderia;
+    }
+    public int getDespensa() {
+        return despensa;
+    }
+    public int getVaranda() {
+        return varanda;
+    }
+
+    public int getPreco() {
+        return preco;
+    }
+
+    public String getTipoDeNegocio() {
+        return tipoDeNegocio;
+    }
+    public int getCodImovel(){
+        return codImovel;
+    }
+    public String getRua(){
+        return end.getRua();
+    }
+    public String getBairro(){
+        return end.getBairro();
+    }
+    public String getCidade(){
+        return end.getCidade();
+    }
+    public String getEstado(){
+        return end.getEstado();
+    }
+    public int getNum(){
+        return end.getNum();
+    }
+    public int getCep(){
+        return end.getCep();
+    }
 }
