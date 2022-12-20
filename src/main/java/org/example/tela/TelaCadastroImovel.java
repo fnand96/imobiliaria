@@ -66,10 +66,10 @@ public class TelaCadastroImovel {
         System.out.println(Comodos.VARANDA);
         int varanda = scanner.nextInt();
 
-        System.out.println("Informe o Tipo de Negócio(Compra ou Alguel)");
+        System.out.println("Informe o Tipo de Negócio (Compra ou Aluguel)");
         String tipoDeNegocio = scanner.next();
 
-        System.out.println("Informe o Preço que deseja pagar");
+        System.out.println("Informe o preço do negócio: ");
         int preco = scanner.nextInt();
 
         int codImovel;
@@ -78,7 +78,7 @@ public class TelaCadastroImovel {
 
         Endereco end = new Endereco(rua, estado, bairro, cidade, cep, num);
 
-        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, tipoDeNegocio);
+        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, quarto, tipoDeNegocio);
         Inventario.adicionar(imovel);
 
         System.out.println("Cadastro realizado!! O código do imóvel é: "+ codImovel);

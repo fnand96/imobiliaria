@@ -33,89 +33,96 @@ public class TelaBuscarImovelComodo {
             case 1:
                 System.out.println("Digite o numero de salas: ");
                 int sala = scanner.nextInt();
-//                for (Imovel i : ic.getImoveis) {
-//                    if (i.getCidade().equals(cidade)) {
-//                    imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getSala() == (sala)) {
+                    imprimeInfo(i);
+                        return i;
+                    }
+                }
                     System.out.println("Imóvel não encontrado!");
                     return null;
+
                     case 2:
                         System.out.println("Digite o numero de cozinhas: ");
-//                String bairro = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getBairro().equals(bairro)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int cozinha = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getCozinha() == (cozinha)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 3:
                         System.out.println("Digite o numero de banheiros: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int banheiro = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getBanheiro() == (banheiro)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 4:
                         System.out.println("Digite o numero de quartos: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int quarto = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getQuarto() == (quarto)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 5:
                         System.out.println("Digite o numero de escritórios: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int escritorio = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getEscritorio() == (escritorio)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 6:
                         System.out.println("Digite o numero de lavanderias: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int lavanderia = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getLavanderia() == (lavanderia)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 7:
                         System.out.println("Digite o numero de despensas: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int despensa = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getDespensa()== (despensa)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
+
                     case 8:
                         System.out.println("Digite o numero de varandas: ");
-//                String rua = scanner.next();
-//                for (Imovel i : inventario.getImoveis) {
-//                    if (i.getRua().equals(rua)) {
-//                        imprimeInfo(i);
-//                        return i;
-//                    }
-//                }
+                int varanda = scanner.nextInt();
+                for (Imovel i : ic.getImoveis) {
+                    if (i.getVaranda()==(varanda)) {
+                        imprimeInfo(i);
+                        return i;
+                    }
+                }
                         System.out.println("Imóvel não encontrado!");
                         return null;
 
