@@ -4,6 +4,7 @@ import org.example.entidade.*;
 import org.example.persistencia.Inventario;
 
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -49,6 +50,9 @@ public class TelaCadastroImovel {
 
         System.out.println(Comodos.BANHEIRO);
         int banheiro = scanner.nextInt();
+
+        System.out.println(Comodos.QUARTO);
+        int quarto = scanner.nextInt();
 
         System.out.println(Comodos.ESCRITORIO);
         int escritorio = scanner.nextInt();

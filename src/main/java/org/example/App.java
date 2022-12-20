@@ -3,9 +3,9 @@ package org.example;
 import org.example.entidade.Imovel;
 import org.example.entidade.Cliente;
 import org.example.entidade.Interesse;
-import org.example.tela.TelaCadastroCliente;
-import org.example.tela.TelaCadastroImovel;
-import org.example.tela.TelaCadastroInteresseporImovel;
+import org.example.persistencia.Inventario;
+import org.example.persistencia.InventarioComodos;
+import org.example.tela.*;
 
 import java.util.Scanner;
 
@@ -19,12 +19,16 @@ public class App
         int opcao = 0;
 
         do {
-            System.out.println(" (1) - Cadastrar Cliente \n (2) - Cadastrar Imovel \n (3) - Cadastrar Interesse por Imovel \n (4) - Buscar Imóvel Por Endereço \n (0) - Sair");
+            System.out.println(" (1) - Cadastrar Cliente \n (2) - Cadastrar Imovel \n (3) - Cadastrar Interesse por Imovel \n " +
+                    "(4) - Buscar Imóvel Por Endereço \n (5) - Buscar Imóvel por cômodos \n (0) - Sair");
 
             opcao = scanner.nextInt();
             Cliente cliente = null;
             Imovel imovel = null;
             Interesse interesse = null;
+            Inventario inventario = new Inventario();
+            InventarioComodos ic = new InventarioComodos();
+
             switch (opcao) {
                 case 1:
                     cliente = TelaCadastroCliente.cadastrarCliente(scanner);
@@ -36,8 +40,10 @@ public class App
                     interesse = TelaCadastroInteresseporImovel.cadastrarInteresse(scanner);
                     break;
                 case 4:
-                    // Buscar imóvel por endereço
+                    imovel = TelaBuscarImovelLocalizacao.buscar(scanner, inventario);
                     break;
+                case 5:
+                    imovel = TelaBuscarImovelComodo.buscar(scanner, ic);
                 case 0:
                     System.out.println("Até Logo");
                     break;
