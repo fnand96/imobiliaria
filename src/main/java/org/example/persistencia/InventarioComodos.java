@@ -6,13 +6,12 @@ import java.util.ArrayList;
 public class InventarioComodos {
 
     private static ArrayList<Imovel> imoveis = new ArrayList<>();
-    public Imovel[] getImoveis;
 
-    public static void adicionar(Imovel imovel) {
+    public void adicionar(Imovel imovel) {
+
         imoveis.add(imovel);
     }
-
-    public static ArrayList getImoveis(){
+    public ArrayList<Imovel> getImoveis(){
         return imoveis;
     }
 
@@ -30,6 +29,7 @@ public class InventarioComodos {
             System.out.println("Tipo de negocio: " + i.getTipoDeNegocio());
             System.out.println("Codigo do imovel: " + i.getCodImovel());
             System.out.println("=============================");
+            System.out.println("\n");
         }
     }
 

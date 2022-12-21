@@ -5,9 +5,7 @@ import java.util.Random;
 public class Imovel {
 
     private String tipoDeImovel;
-
     private Endereco end;
-
     private int sala;
     private int cozinha;
     private int banheiro;
@@ -23,7 +21,6 @@ public class Imovel {
 
     public int codImovel;
     Random random = new Random();
-
 
     public Imovel(String tipoDeImovel, Endereco end, int sala, int cozinha, int banheiro, int escritorio, int lavanderia, int despensa, int varanda, int preco, int quarto, String tipoDeVenda){
         this.tipoDeImovel = tipoDeImovel;

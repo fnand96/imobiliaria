@@ -2,6 +2,7 @@ package org.example.tela;
 
 import org.example.entidade.*;
 import org.example.persistencia.Inventario;
+import org.example.persistencia.InventarioComodos;
 
 
 import java.sql.SQLOutput;
@@ -78,10 +79,9 @@ public class TelaCadastroImovel {
 
         Endereco end = new Endereco(rua, estado, bairro, cidade, cep, num);
 
-        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, quarto, tipoDeNegocio);
-        Inventario.adicionar(imovel);
+        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda, preco, quarto, tipoDeNegocio);
 
-        System.out.println("Cadastro realizado!! O código do imóvel é: "+ codImovel);
+        System.out.println("Cadastro realizado!! O código do imóvel é: " + codImovel);
         return imovel;
     }
 
