@@ -1,6 +1,7 @@
 package org.example.tela;
 
 import org.example.entidade.Imovel;
+import org.example.entidade.Interesse;
 import org.example.persistencia.Inventario;
 
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class TelaBuscarImovelPorTipo {
         System.out.println("Tipo : ");
         System.out.println(">>>Imovel"+imovel.getTipoDeImovel());
         System.out.println(">>>Negócio: "+imovel.getTipoDeNegocio());
-        System.out.println("Caracteristica do imovel:");
+        System.out.println("Caracteristicas do imovel:");
         System.out.println(">>>Número de salas: "+imovel.getSala());
         System.out.println(">>>Número de cozinhas: "+imovel.getCozinha());
         System.out.println(">>>Número de banheiros: "+imovel.getBanheiro());
@@ -26,22 +27,21 @@ public class TelaBuscarImovelPorTipo {
         System.out.println("===================================================");
     }
 
-    public static void buscadorImovel(Scanner sc, Inventario database){
-        System.out.println("Olá digite o tipo do imovel que deseja buscar abaixo: ");
-        String busca;
-        busca = sc.nextLine();
-        try{
-            for (Imovel i : database.getImoveis){
-                if(i.getTipoDeImovel().equals(busca)){
-                    imprimeInfo(i);
-                }
+    public static void buscar(Scanner scanner, Inventario database){
+
+        System.out.println("Digite se deseja ver imóveis para aluguel ou compra: ");
+        String busca = scanner.next();
+        boolean tipoNegocio = false;
+
+        for (Imovel i : database.getImoveis()){
+            if(i.getTipoDeNegocio().equals(busca)){
+                tipoNegocio = true;
+                imprimeInfo(i);
             }
-        }catch (Exception e){
-            System.out.println("Error: " + e.getMessage());
         }
-
-
-
+        if(!tipoNegocio){
+            System.out.printf("\nNão há imoveis para "+busca+"\n");
+        }
     }
 
 

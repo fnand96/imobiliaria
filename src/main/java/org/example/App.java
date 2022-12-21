@@ -22,7 +22,8 @@ public class App
 
         do {
             System.out.println("\n (1) - Cadastrar Cliente \n (2) - Cadastrar Imovel \n (3) - Cadastrar Interesse por Imovel \n " +
-                    "(4) - Buscar Imóvel Por Endereço \n (5) - Buscar Imóvel por cômodos \n (6) - Buscar interessados por Imovel \n (0) - Sair");
+                    "(4) - Buscar Imóvel por endereço \n (5) - Buscar Imóvel por cômodos " + "\n (6) - Buscar Imóvel por tipo de negócio"+
+                    "\n (7) - Buscar interessados por Imovel \n (0) - Sair");
 
             opcao = scanner.nextInt();
             Cliente cliente = null;
@@ -50,6 +51,9 @@ public class App
                     TelaBuscarImovelComodo.buscar(scanner, inventarioComodos);
                     break;
                 case 6:
+                    TelaBuscarImovelPorTipo.buscar(scanner, inventario);
+                    break;
+                case 7:
                     TelaBuscarInteresse.imprimeInfo(scanner, interesses);
                     break;
                 case 0:
