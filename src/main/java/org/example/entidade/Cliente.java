@@ -11,17 +11,19 @@ public class Cliente {
 
     private Endereco end;
 
-    //public int codCliente;
-    //Random random = new Random();
+    public int codCliente;
+    Random random = new Random();
 
     public Cliente(String nome, int idade, int telefone, Endereco end){
         this.nome = nome;
         this.idade = idade;
         this.telefone = telefone;
         this.end = end;
-        //this.codCliente = random.nextInt(100);
+        this.codCliente = random.nextInt(100);
     }
-//
+
+
+
 //    public String getNome() {
 //        return nome;
 //    }
