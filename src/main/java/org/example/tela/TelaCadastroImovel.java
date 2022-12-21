@@ -2,8 +2,10 @@ package org.example.tela;
 
 import org.example.entidade.*;
 import org.example.persistencia.Inventario;
+import org.example.persistencia.InventarioComodos;
 
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -50,6 +52,9 @@ public class TelaCadastroImovel {
         System.out.println(Comodos.BANHEIRO);
         int banheiro = scanner.nextInt();
 
+        System.out.println(Comodos.QUARTO);
+        int quarto = scanner.nextInt();
+
         System.out.println(Comodos.ESCRITORIO);
         int escritorio = scanner.nextInt();
 
@@ -62,10 +67,10 @@ public class TelaCadastroImovel {
         System.out.println(Comodos.VARANDA);
         int varanda = scanner.nextInt();
 
-        System.out.println("Informe o Tipo de Negócio(Compra ou Alguel)");
+        System.out.println("Informe o Tipo de Negócio (Compra ou Aluguel)");
         String tipoDeNegocio = scanner.next();
 
-        System.out.println("Informe o Preço que deseja pagar");
+        System.out.println("Informe o preço do negócio: ");
         int preco = scanner.nextInt();
 
         int codImovel;
@@ -74,10 +79,9 @@ public class TelaCadastroImovel {
 
         Endereco end = new Endereco(rua, estado, bairro, cidade, cep, num);
 
-        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda,preco, tipoDeNegocio);
-        Inventario.adicionar(imovel);
+        Imovel imovel = new Imovel( tipoDeImovel, end, sala, cozinha, banheiro, escritorio, lavanderia, despensa, varanda, preco, quarto, tipoDeNegocio);
 
-        System.out.println("Cadastro realizado!! O código do imóvel é: "+ codImovel);
+        System.out.println("Cadastro realizado!! O código do imóvel é: " + codImovel);
         return imovel;
     }
 
